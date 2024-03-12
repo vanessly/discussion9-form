@@ -1,24 +1,37 @@
   /* Create an accessible color palette using var()function */
   /* https://www.w3schools.com/css/css3_variables.asp */
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+  :root {
+    --blue: #86e2d5;
+    --gray: #333; 
+    --white: #fff;
+  }
+  
+  body {
+    font-family: 'Rubik', sans-serif;
+  }
   
   form {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
     border: 1px solid #ccc;
     border-radius: 16px;
     width:70%;
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: #702082;
-    background: #CFC096;
+    color: var(--white);
+    background: var(--gray);
   }
-
+  .option {
+    display: inline-flex;
+  }
   .radio {
     grid-column-start: 1;
     grid-column-end: 3;
     /* background: #575294; */
-    color: #702082;
+    color: var(--white);
   }
 
   #name {
@@ -26,8 +39,8 @@
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
-    background: #CFC096;
-    color: #9B9A6D;
+    background: var(--blue);
+    color: var(--gray);
   }
 
   #message {
@@ -39,7 +52,7 @@
   input,
   textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--blue);
     width: 100%;
   }
 
